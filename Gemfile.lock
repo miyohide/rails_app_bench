@@ -115,6 +115,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-jdbcsqlite3-adapter
   coffee-rails (~> 4.0.0)
   faker
   jbuilder (~> 2.0)
