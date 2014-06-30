@@ -4,7 +4,8 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
+     get_datas = Array.new(10_000) { |i| i }.sample(1_000)
+     @entries = Entry.find(get_datas)
   end
 
   # GET /entries/1
