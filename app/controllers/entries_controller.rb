@@ -5,7 +5,7 @@ class EntriesController < ApplicationController
   # GET /entries.json
   def index
      get_datas = Array.new(9_999) { |i| i + 1 }.sample(1_000)
-     @entries = Entry.find(get_datas)
+     @entries = Kaminari.paginate_array(Entry.find(get_datas)).page(params[:page])
   end
 
   # GET /entries/1
