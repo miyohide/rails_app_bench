@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.1.2'
-gem 'sqlite3', platforms: :ruby
-gem 'activerecord-jdbcsqlite3-adapter', platforms: :jruby
+# gem 'sqlite3', platforms: :ruby
+# gem 'activerecord-jdbcsqlite3-adapter', platforms: :jruby
+gem 'pg', platforms: :ruby
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
