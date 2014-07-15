@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140712103355) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "entries", force: true do |t|
     t.string   "title"
     t.text     "body"
@@ -27,8 +30,8 @@ ActiveRecord::Schema.define(version: 20140712103355) do
     t.datetime "updated_at"
   end
 
-  add_index "taggings", ["entry_id"], name: "index_taggings_on_entry_id"
-  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
+  add_index "taggings", ["entry_id"], name: "index_taggings_on_entry_id", using: :btree
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
 
   create_table "tags", force: true do |t|
     t.string   "tag_name"
